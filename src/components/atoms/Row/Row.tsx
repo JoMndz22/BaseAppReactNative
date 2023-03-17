@@ -1,4 +1,5 @@
-import { StyleSheet, View } from "react-native/types";
+import React from 'react';
+import { StyleSheet, View } from "react-native";
 
 const Row = ({children}: React.PropsWithChildren): JSX.Element => {
     return <View style={styles.row}>{children}</View>
@@ -6,14 +7,8 @@ const Row = ({children}: React.PropsWithChildren): JSX.Element => {
 
 const styles = StyleSheet.create({
     row:{
-        flexGrow: 1,
-        height: 100,
-        backgroundColor: 'white',
-        shadowColor: '#000',
-        shadowRadius: 10,
-        borderRadius: 10,
-        shadowOffset: {height:10, width:0},
-        shadowOpacity: 0.17
+        flexDirection: 'row',
+        columnGap: 15,
     }
 })
 
