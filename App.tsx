@@ -9,6 +9,7 @@ import {
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {Row} from './src/components/atoms';
+import { Navigation } from './src/navigation';
 
 function App(): JSX.Element {
     const isDarkMode = useColorScheme() === 'dark';
@@ -20,22 +21,7 @@ function App(): JSX.Element {
 
     return (
         <SafeAreaView style={backgroundStyle}>
-            <ScrollView contentInsetAdjustmentBehavior="automatic"
-                style={backgroundStyle}
-                contentContainerStyle={styles.container}>
-                <Row>
-                    <View style={styles.box}/>
-                    <View style={styles.box}/>
-                    <View style={styles.box}/>
-                </Row>
-                <Row>
-                    <View style={styles.box}/>
-                </Row>
-                <Row>
-                    <View style={styles.box}/>
-                    <View style={styles.box}/>
-                </Row>
-            </ScrollView>
+            <Navigation/>
         </SafeAreaView>
     );
 }
