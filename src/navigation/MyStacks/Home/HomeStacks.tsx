@@ -1,5 +1,5 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { HomeScreen } from "../../../screens";
+import { HomeScreen,InternalScreen } from "../../../screens";
 
 const HomeStack = createNativeStackNavigator();
 
@@ -12,7 +12,7 @@ const HomeStacks = () => (
                 headerShown:false
             }}
         />
-        {/* <HomeStack.Screen name="Home Screen Stack" component={HomeScreen} /> */}
+        <HomeStack.Screen name="Internal Screen" component={InternalScreen} />
     </HomeStack.Navigator>
 )
 export default HomeStacks;
