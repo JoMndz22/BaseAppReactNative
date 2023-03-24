@@ -1,6 +1,6 @@
 import { Text, TouchableOpacity, View, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { Button, Row, ButtonIcon } from '../../components/atoms';
+import { Button, Row, ButtonIcon, P } from '../../components/atoms';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../navigation/myStacks/home/HomeStacks';
 
@@ -25,7 +25,7 @@ const HomeScreen = (): JSX.Element => {
             </Button>
             <ButtonIcon onPress={()=> console.log('!!!')} background='blue'>
                 <Text style={{color:'white'}}>HOLAAA</Text>
-                <Text>ICON R</Text>
+                <P>ICON</P>
             </ButtonIcon>
         </View>
     )
