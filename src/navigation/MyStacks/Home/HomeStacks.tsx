@@ -1,18 +1,23 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { HomeScreen,InternalScreen } from "../../../screens";
 
+export type RootStackParamList = {
+    InternalScreen: undefined;
+    HomeScreenStack: undefined;
+};  
+
 const HomeStack = createNativeStackNavigator();
 
-const HomeStacks = () => (
+const HomeStacks = ():JSX.Element => (
     <HomeStack.Navigator>
         <HomeStack.Screen 
-            name="Home Screen Stack" 
+            name="HomeScreenStack" 
             component={HomeScreen} 
             options={{
                 headerShown:false
             }}
         />
-        <HomeStack.Screen name="Internal Screen" component={InternalScreen} />
+        <HomeStack.Screen name="InternalScreen" component={InternalScreen} />
     </HomeStack.Navigator>
 )
 export default HomeStacks;

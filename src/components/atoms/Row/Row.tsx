@@ -1,8 +1,15 @@
 import React from 'react';
-import { StyleSheet, View } from "react-native";
+import { StyleProp, StyleSheet, View, ViewStyle } from "react-native";
 
-const Row = ({children}: React.PropsWithChildren): JSX.Element => {
-    return <View style={styles.row}>{children}</View>
+//style?: StyleProp<ViewStyle> | undefined;
+
+interface RowProps{
+    children?: React.ReactNode,
+    style?: StyleProp<ViewStyle> | undefined;
+}
+
+const Row = ({children,style}: RowProps): JSX.Element => {
+    return <View style={[styles.row, style]}>{children}</View>
 }
 
 const styles = StyleSheet.create({

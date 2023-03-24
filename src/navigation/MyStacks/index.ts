@@ -1,1 +1,1 @@
-export {HomeStacks} from './Home'
+export {HomeStacks,RootStackParamList} from './home'
