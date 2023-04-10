@@ -3,6 +3,7 @@ import { useNavigation } from '@react-navigation/native';
 import { Button, Row, ButtonIcon, P } from '../../components/atoms';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../navigation/myStacks/home/HomeStacks';
+import { Header } from '../../components/templates';
 
 export type StackNavigation = NativeStackNavigationProp<RootStackParamList>;
 
@@ -11,6 +12,7 @@ const HomeScreen = (): JSX.Element => {
 
     return(
         <View>
+            <Header />
             <Row>
                 <Text>HomeScreen.tsx</Text>
             </Row>
