@@ -4,6 +4,7 @@ import { Button, Row, ButtonIcon, P } from '../../components/atoms';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../navigation/myStacks/home/HomeStacks';
 import { Header } from '../../components/templates';
+import { GlobalStyles } from '../../assets/css';
 
 export type StackNavigation = NativeStackNavigationProp<RootStackParamList>;
 
@@ -25,7 +26,7 @@ const HomeScreen = (): JSX.Element => {
             <Button onPress={()=> console.log('OKKKK22')} background='red'>
                 <Text style={{color:'white'}}>HOLAAA</Text>
             </Button>
-            <ButtonIcon onPress={()=> console.log('!!!')} background='blue'>
+            <ButtonIcon onPress={()=> console.log('!!!')} background={GlobalStyles.colorYellow.color}>
                 <Text style={{color:'white'}}>HOLAAA</Text>
                 <P>ICON</P>
             </ButtonIcon>
@@ -35,7 +36,7 @@ const HomeScreen = (): JSX.Element => {
 
 const styles = StyleSheet.create({
     btn:{
-        backgroundColor:'#dedede',
+        backgroundColor: GlobalStyles.colorRed.color,
         padding: 10,
         alignItems:'center',
         marginTop: 20
