@@ -16,7 +16,8 @@ const styles = ({align,color,fsize}:any) => StyleSheet.create({
     txtAlign:{ 
         textAlign: align,
         color,
-        fontSize: fsize
+        fontSize: fsize,
+        fontFamily: 'Poppins-Regular'
     },
 })
 
