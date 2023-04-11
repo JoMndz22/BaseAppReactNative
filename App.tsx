@@ -1,36 +1,24 @@
-import React from 'react';
-import {
-    SafeAreaView,
-    ScrollView,
-    StyleSheet,
-    useColorScheme,
-    View
-} from 'react-native';
-
-import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {Row} from './src/components/atoms';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import { Navigation } from './src/navigation';
 
 function App(): JSX.Element {
-    const isDarkMode = useColorScheme() === 'dark';
-
-    const backgroundStyle = {
-        //backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-        flex: 1
-    };
 
     return (
-        <SafeAreaView style={backgroundStyle}>
+        <SafeAreaView style={styles.backgroundStyle}>
             <Navigation/>
         </SafeAreaView>
     );
 }
 
 const styles = StyleSheet.create({
+    backgroundStyle:{
+        //backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+        flex: 1,
+    },
     container: {
         paddingHorizontal: 15,
         rowGap: 15,
-        backgroundColor:'red'
+        backgroundColor: 'red'
     },
     box: {
         flexGrow: 1,
