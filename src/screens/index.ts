@@ -1,3 +1,3 @@
-export {HomeScreen} from './homeScreen'
-export {ProfileScreen} from './profileScreen'
-export {InternalScreen} from './internalScreen'
+export { HomeScreen } from './HomeScreen';
+export { ProfileScreen } from './ProfileScreen';
+export { InternalScreen } from './InternalScreen';
