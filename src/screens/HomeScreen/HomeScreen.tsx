@@ -10,8 +10,6 @@ export type StackNavigation = NativeStackNavigationProp<RootStackParamList>;
 
 const HomeScreen = (): JSX.Element => {
   const navigation = useNavigation<StackNavigation>();
-  let prueba;
-  
 
   return (
     <View>
@@ -57,8 +55,8 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   textWhite: {
-    color: GlobalStyles.textWhite.color
-  }
+    color: GlobalStyles.textWhite.color,
+  },
 });
 
 export default HomeScreen;
