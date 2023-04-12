@@ -17,7 +17,7 @@ const HomeStacks = (): JSX.Element => (
         headerShown: false,
       }}
     />
-    <HomeStack.Screen name={'InternalScreen'} component={InternalScreen} />
+    <HomeStack.Screen name='InternalScreen' component={InternalScreen} />
   </HomeStack.Navigator>
 );
 export default HomeStacks;

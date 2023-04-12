@@ -20,11 +20,11 @@ const HomeScreen = (): JSX.Element => {
       <TouchableOpacity onPress={() => navigation.navigate('InternalScreen')} style={styles.btn}>
         <Text>Go to internal screen</Text>
       </TouchableOpacity>
-      <Button onPress={() => console.log('OKKKK22')} background={'red'}>
-        <Text style={{ color: 'white' }}>HOLAAA</Text>
+      <Button onPress={() => console.log('OKKKK22')} background='red'>
+        <Text style={styles.text}>HOLAAA</Text>
       </Button>
       <ButtonIcon onPress={() => console.log('!!!')} background={GlobalStyles.colorYellow.color}>
-        <Text style={{ color: 'white' }}>HOLAAA</Text>
+        <Text style={styles.text}>HOLAAA</Text>
         <P>ICON</P>
       </ButtonIcon>
     </View>
@@ -50,6 +50,9 @@ const styles = StyleSheet.create({
       width: 0,
     },
     shadowOpacity: 0.17,
+  },
+  text: {
+    color: 'white',
   },
 });
 
