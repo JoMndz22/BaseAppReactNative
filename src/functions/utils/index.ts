@@ -1,1 +1,1 @@
-export { default as Nz } from './Nz'
+export { default as Nz } from './Nz';

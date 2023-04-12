@@ -1,1 +1,1 @@
-import { Nz } from './utils'
+export { Nz } from './utils';
