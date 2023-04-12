@@ -1,5 +1,5 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { HomeScreen, InternalScreen } from '../../../screens';
+import { InternalScreen,HomeScreen } from '../../../screens';
 
 export type RootStackParamList = {
   InternalScreen: undefined;

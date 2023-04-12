@@ -2,7 +2,7 @@ import { Text, TouchableOpacity, View, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Button, Row, ButtonIcon, P } from '../../components/atoms';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../../navigation/myStacks/home/HomeStacks';
+import { RootStackParamList } from '../../navigation/MyStacks/Home/HomeStacks';
 import { Header } from '../../components/templates';
 import { GlobalStyles } from '../../assets/css';
 
@@ -18,7 +18,7 @@ const HomeScreen = (): JSX.Element => {
         <Text>HomeScreen.tsx</Text>
       </Row>
       <TouchableOpacity onPress={() => navigation.navigate('InternalScreen')} style={styles.btn}>
-        <Text>Go to internal screen</Text>
+        <Text style={styles.textWhite}>Go to internal screen</Text>
       </TouchableOpacity>
       <Button onPress={() => console.log('OKKKK22')} background='red'>
         <Text style={styles.text}>HOLAAA</Text>
@@ -54,6 +54,9 @@ const styles = StyleSheet.create({
   text: {
     color: 'white',
   },
+  textWhite: {
+    color: GlobalStyles.textWhite.color
+  }
 });
 
 export default HomeScreen;

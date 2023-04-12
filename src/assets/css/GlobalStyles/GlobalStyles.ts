@@ -10,10 +10,13 @@ const GlobalStyles = StyleSheet.create({
     color: 'red',
   },
   colorRed: {
-    color: Colors.blue[0],
+    color: Colors.blueSolid1[0],
   },
   colorYellow: {
     color: Colors.yellow[0],
   },
+  textWhite:{
+    color: Colors.white[0]
+  }
 });
 export default GlobalStyles;
