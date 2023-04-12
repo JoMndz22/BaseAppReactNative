@@ -1,10 +1,13 @@
 import { Text, TouchableOpacity, View, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { Button, Row, ButtonIcon, P } from '../../components/atoms';
+import { Row } from '../../components/atoms';
+import { ButtonPrimary, ButtonSecondary, ButtonIcon } from '../../components/atoms/Button';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../navigation/MyStacks/Home/HomeStacks';
 import { Header } from '../../components/templates';
 import { GlobalStyles } from '../../assets/css';
+import Printer from '../../assets/images/svg/Printer.svg';
+import SvgIcon from '../../components/atoms/SvgIcon/SvgIcon';
 
 export type StackNavigation = NativeStackNavigationProp<RootStackParamList>;
 
@@ -20,13 +23,39 @@ const HomeScreen = (): JSX.Element => {
       <TouchableOpacity onPress={() => navigation.navigate('InternalScreen')} style={styles.btn}>
         <Text style={styles.textWhite}>Go to internal screen</Text>
       </TouchableOpacity>
-      <Button onPress={() => console.log('OKKKK22')} background='red'>
+      {/* <Button onPress={() => console.log('OKKKK22')} background='red'>
         <Text style={styles.text}>HOLAAA</Text>
-      </Button>
-      <ButtonIcon onPress={() => console.log('!!!')} background={GlobalStyles.colorYellow.color}>
-        <Text style={styles.text}>HOLAAA</Text>
-        <P>ICON</P>
-      </ButtonIcon>
+      </Button> */}
+      <View style={styles.content}>
+        <ButtonPrimary
+          title='Iniciar Sesión'
+          onPress={() => null}
+          buttonStyle={styles.buttonStyle}
+        />
+        <ButtonPrimary
+          title='Iniciar Sesión Iniciar Sesión Iniciar Sesión Iniciar Sesión'
+          onPress={() => null}
+          buttonStyle={styles.buttonStyle}
+          isDisabled
+        />
+        <ButtonSecondary
+          title='Iniciar Sesión'
+          onPress={() => null}
+          buttonStyle={styles.buttonStyle}
+        />
+        <ButtonSecondary
+          title='Iniciar Sesión Iniciar Sesión Iniciar Sesión Iniciar Sesión'
+          onPress={() => null}
+          buttonStyle={styles.buttonStyle}
+          isDisabled
+        />
+        <ButtonIcon onPress={() => null} buttonStyle={styles.buttonIconStyle}>
+          <Printer />
+        </ButtonIcon>
+        <ButtonIcon isDisabled onPress={() => null} buttonStyle={styles.buttonIconStyle}>
+          <SvgIcon name='printer' color='green' />
+        </ButtonIcon>
+      </View>
     </View>
   );
 };
@@ -56,6 +85,20 @@ const styles = StyleSheet.create({
   },
   textWhite: {
     color: GlobalStyles.textWhite.color,
+  },
+  content: {
+    marginHorizontal: 21,
+    marginVertical: 21,
+    alignItems: 'center',
+  },
+  buttonStyle: {
+    height: 50,
+    marginBottom: 20,
+  },
+  buttonIconStyle: {
+    width: 73,
+    height: 50,
+    marginBottom: 20,
   },
 });
 
