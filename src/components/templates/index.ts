@@ -1,1 +1,1 @@
-export { Header } from './partials'
+export { Header } from './partials';
