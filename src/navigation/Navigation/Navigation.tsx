@@ -1,5 +1,5 @@
 import { NavigationContainer } from '@react-navigation/native';
-import { MyTabs } from '../myTabs';
+import { MyTabs } from '../MyTabs';
 
 const Navigation = (): JSX.Element => {
   return (
