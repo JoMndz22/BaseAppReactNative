@@ -1,7 +1,13 @@
-import { SafeAreaView, StyleSheet } from 'react-native';
-import { Navigation } from './src/navigation';
+import { useEffect } from 'react'
+import { SafeAreaView, StyleSheet } from 'react-native'
+import { Navigation } from './src/navigation'
+import SplashScreen from 'react-native-splash-screen'
 
 function App(): JSX.Element {
+
+    useEffect(() => {
+        SplashScreen.hide()
+    },[])
 
     return (
         <SafeAreaView style={styles.backgroundStyle}>
