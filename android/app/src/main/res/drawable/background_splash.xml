@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@color/blue"/>
+
+    <item
+        android:drawable="@drawable/splash_screem"
+        android:width="900dp"
+        android:height="900dp" />
+
+    <item
+        android:width="105dp"
+        android:height="105dp"
+        android:drawable="@drawable/gota"
+        android:gravity="center" />
+</layer-list>
