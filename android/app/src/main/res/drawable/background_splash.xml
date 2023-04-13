@@ -13,4 +13,20 @@
         android:height="105dp"
         android:drawable="@drawable/gota"
         android:gravity="center" />
+
+    <item
+        android:width="52dp"
+        android:height="20dp"
+        android:drawable="@drawable/anda_logotipo"
+        android:gravity="bottom|center"
+        android:bottom="80dp"
+        />
+
+    <item
+        android:width="160dp"
+        android:height="15dp"
+        android:drawable="@drawable/text_splash"
+        android:gravity="bottom|center"
+        android:bottom="50dp"
+        />
 </layer-list>
