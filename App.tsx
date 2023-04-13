@@ -1,10 +1,11 @@
-import { SafeAreaView, StyleSheet } from 'react-native';
+import { SafeAreaView, StatusBar, StyleSheet } from 'react-native';
 import { Navigation } from './src/navigation';
 
 function App(): JSX.Element {
 
     return (
         <SafeAreaView style={styles.backgroundStyle}>
+            <StatusBar backgroundColor="#5E8D48" barStyle="light-content" />
             <Navigation/>
         </SafeAreaView>
     );
