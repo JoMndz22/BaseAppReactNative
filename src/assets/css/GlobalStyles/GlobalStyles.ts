@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { Colors } from '../index';
+import { Colors } from '../Colors';
 
 const GlobalStyles = StyleSheet.create({
   container: {
@@ -34,6 +34,7 @@ const GlobalStyles = StyleSheet.create({
   flexRow: {
     display: 'flex',
     flexDirection: 'row',
+    flexWrap: 'wrap',
   },
   flexColumn: {
     display: 'flex',
@@ -44,6 +45,9 @@ const GlobalStyles = StyleSheet.create({
   },
   flexGrow1: {
     flexGrow: 1,
+  },
+  justifyContentEnd: {
+    justifyContent: 'flex-end',
   },
 });
 export default GlobalStyles;

@@ -4,7 +4,7 @@ import { Button, Row, ButtonIcon, P } from '../../components/atoms';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../navigation/MyStacks/Home/HomeStacks';
 import { Header } from '../../components/templates';
-import { GlobalStyles } from '../../assets/css';
+import { GlobalStyles } from '../../assets/';
 
 export type StackNavigation = NativeStackNavigationProp<RootStackParamList>;
 

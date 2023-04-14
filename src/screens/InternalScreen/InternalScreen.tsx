@@ -1,18 +1,17 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { CardUser } from '../../components/organisms';
 import { Row } from '../../components/atoms';
+import { Nz } from '../../functions';
 
 const InternalScreen = (): JSX.Element => {
   return (
     <View style={styles.flex}>
-      <Text>InternalScreen.tsx</Text>
       <Row>
         <CardUser
           id='15479'
-          direccion='Colonia Buenos Aires 3, Diagonal Centroamérica, Avenida 
-        Alvarado, contiguo al Ministerio de Hacienda'
+          direccion='Colonia Buenos Aires 3, Diagonal Centroamérica, Avenida Alvarado, contiguo al Ministerio de Hacienda'
           factura={null}
-          geo={true}
+          geo={false}
           local='DOMICILIAR'
           medidor='117089244'
           metrosCubicos='091282'
@@ -26,10 +25,9 @@ const InternalScreen = (): JSX.Element => {
       <Row>
         <CardUser
           id='15479'
-          direccion='Colonia Buenos Aires 3, Diagonal Centroamérica, Avenida 
-        Alvarado, contiguo al Ministerio de Hacienda'
-          factura={null}
-          geo={true}
+          direccion='Colonia Buenos Aires 3, Diagonal Centroamérica, Avenida Alvarado, contiguo al Ministerio de Hacienda'
+          factura={true}
+          geo={false}
           local='COMERCIAL'
           medidor='117089244'
           metrosCubicos='091282'
@@ -48,6 +46,8 @@ const styles = StyleSheet.create({
   flex: {
     backgroundColor: '#fff',
     flex: 1,
+    paddingHorizontal: Nz(20),
+    paddingVertical: Nz(25),
   },
 });
 export default InternalScreen;

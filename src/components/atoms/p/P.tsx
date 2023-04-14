@@ -1,33 +1,63 @@
-import { Text, StyleSheet, StyleProp, ViewStyle } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
 import { Nz } from '../../../functions';
-import { Colors } from '../../../assets/css';
+import { Colors } from '../../../assets/';
+import { Pprops } from './P.types';
+import Fonts from '../../../assets/fonts/Fonts';
 
-interface Pprops {
-  children: React.ReactNode;
-  color?: string;
-  style?: StyleProp<ViewStyle> | undefined;
-  align?: string;
-  fsize?: number;
-  type?: string;
-}
-// const {txtColor, fSize, aling, typeFont, txtUpper} = props;
 const P = ({
   children,
   align = 'left',
   color = Colors.black[0],
   fsize = Nz(14),
   style = {},
-}: Pprops): JSX.Element => (
-  <Text style={[styles({ align, color, fsize }).txtAlign, style]}>{children}</Text>
-);
+  type,
+}: Pprops): JSX.Element => {
+  let fontFamily = Fonts.medium;
+  switch (type) {
+    case 'black':
+      fontFamily = Fonts.black;
+      break;
+    case 'bold':
+      fontFamily = Fonts.bold;
+      break;
+    case 'extraBold':
+      fontFamily = Fonts.extraBold;
+      break;
+    case 'extraLight':
+      fontFamily = Fonts.extraLight;
+      break;
+    case 'italic':
+      fontFamily = Fonts.italic;
+      break;
+    case 'light':
+      fontFamily = Fonts.light;
+      break;
+    case 'medium':
+      fontFamily = Fonts.medium;
+      break;
+    case 'semibold':
+      fontFamily = Fonts.semibold;
+      break;
+    case 'thin':
+      fontFamily = Fonts.thin;
+      break;
+    default:
+      fontFamily = Fonts.medium;
+      break;
+  }
 
-const styles = ({ align, color, fsize }: any) =>
+  return (
+    <Text style={[styles({ align, color, fsize, fontFamily }).txtAlign, style]}>{children}</Text>
+  );
+};
+
+export const styles = ({ align, color, fsize, fontFamily }: any) =>
   StyleSheet.create({
     txtAlign: {
       textAlign: align,
       color,
       fontSize: fsize,
-      fontFamily: 'Poppins-Regular',
+      fontFamily: fontFamily,
     },
   });
 

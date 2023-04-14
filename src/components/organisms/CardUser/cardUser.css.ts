@@ -3,7 +3,10 @@ import { Nz } from '../../../functions';
 
 export const styles = StyleSheet.create({
   boxCard: {
-    padding: Nz(20),
+    paddingVertical: Nz(8),
+    paddingHorizontal: Nz(12),
+    borderColor: '#baa3a352',
+    borderWidth: Nz(1),
   },
   colGap6: {
     columnGap: Nz(6),
@@ -16,5 +19,8 @@ export const styles = StyleSheet.create({
   borderRight: {
     borderRightWidth: Nz(2),
     borderRightColor: '#CCCCCC',
+  },
+  h18: {
+    height: 18,
   },
 });
