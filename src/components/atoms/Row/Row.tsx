@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleProp, StyleSheet, View, ViewStyle } from 'react-native';
+import { Nz } from '../../../functions';
 
 //style?: StyleProp<ViewStyle> | undefined;
 
@@ -15,7 +16,8 @@ const Row = ({ children, style }: RowProps): JSX.Element => {
 const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
-    columnGap: 15,
+    columnGap: Nz(15),
+    marginBottom: Nz(15),
   },
 });
 
