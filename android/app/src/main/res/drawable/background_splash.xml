@@ -4,9 +4,15 @@
     <item android:drawable="@mipmap/backgroud_splash" />
 
     <item
-        android:width="100dp"
-        android:height="100dp"
-        android:drawable="@mipmap/ic_launcher_round"
+        android:drawable="@drawable/anda_vector_splash"
         android:gravity="center"/>
+
+    <item
+        android:bottom="50dp"
+        android:drawable="@drawable/anda_logo_bottom_splash"
+        android:gravity="center|bottom"
+        android:height="20dp"
+        android:width="55dp"
+        />
 
 </layer-list>
