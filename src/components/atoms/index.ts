@@ -1,3 +1,4 @@
 export { Row } from './Row';
-export { Button, ButtonIcon } from './form';
+export { ButtonPrimary, ButtonSecondary, ButtonIcon, ButtonPrimaryIcon } from './Button';
+export { Svg } from './Svg';
 export { P } from './p';
