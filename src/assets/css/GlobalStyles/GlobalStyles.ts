@@ -15,8 +15,8 @@ const GlobalStyles = StyleSheet.create({
   colorYellow: {
     color: Colors.yellow[0],
   },
-  textWhite:{
-    color: Colors.white[0]
-  }
+  textWhite: {
+    color: Colors.white[0],
+  },
 });
 export default GlobalStyles;

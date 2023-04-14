@@ -6,10 +6,10 @@ export default function ButtonPrimary({
   onPress,
   iconName,
   isDisabled,
+  iconColor,
   iconWidth = 24,
   iconHeight = 24,
   buttonStyle = {},
-  iconColor = 'white',
 }: ButtonIconProps) {
   return (
     <TouchableOpacity

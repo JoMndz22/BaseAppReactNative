@@ -50,7 +50,6 @@ const HomeScreen = (): JSX.Element => {
             iconName='leftArrow'
             iconWidth={24}
             iconHeight={24}
-            iconColor='white'
             buttonStyle={styles.button}
           />
           <ButtonIcon

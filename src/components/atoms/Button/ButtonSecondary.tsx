@@ -1,5 +1,6 @@
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { ButtonSecondaryProps } from './Button.types';
+import { Colors } from '../../../assets/css';
 
 export default function ButtonSecondary({
   title,
@@ -24,8 +25,8 @@ export default function ButtonSecondary({
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'white',
-    borderColor: '#BEC3D8',
+    backgroundColor: Colors.white[0],
+    borderColor: Colors.border[0],
     borderWidth: 1,
     justifyContent: 'center',
     paddingHorizontal: 16,
@@ -41,6 +42,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '600',
     lineHeight: 24,
-    color: '#0F206C',
+    color: Colors.blueSolid1[0],
   },
 });

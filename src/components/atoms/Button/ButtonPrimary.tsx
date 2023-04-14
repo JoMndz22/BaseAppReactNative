@@ -1,5 +1,6 @@
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { ButtonPrimaryProps } from './Button.types';
+import { Colors } from '../../../assets/css';
 
 export default function ButtonPrimary({
   title = 'Button primary',
@@ -24,7 +25,7 @@ export default function ButtonPrimary({
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#0F206C',
+    backgroundColor: Colors.blueSolid1[0],
     justifyContent: 'center',
     paddingHorizontal: 16,
     alignItems: 'center',
@@ -39,6 +40,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '600',
     lineHeight: 24,
-    color: 'white',
+    color: Colors.white[0],
   },
 });

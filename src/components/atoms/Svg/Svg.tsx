@@ -1,6 +1,7 @@
 import { SvgXml } from 'react-native-svg';
 import { SvgProps } from './Svg.types';
 import { SvgFiles } from './SvgFiles';
+import { Colors } from '../../../assets/css';
 
 const addCurrentColorToSvg = (xml: string) => {
   // stroke: value to change the icon color
@@ -18,7 +19,7 @@ const addCurrentColorToSvg = (xml: string) => {
   )}`;
 };
 
-export default function Svg({ name, color, width = 24, height = 24 }: SvgProps) {
+export default function Svg({ name, color = Colors.white[0], width = 24, height = 24 }: SvgProps) {
   return (
     <SvgXml
       xml={addCurrentColorToSvg(SvgFiles[name][0])}
