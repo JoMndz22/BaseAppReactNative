@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     alignItems: 'center',
     borderRadius: 12,
+    flex: 1,
     height: 50,
   },
   disableStyle: {

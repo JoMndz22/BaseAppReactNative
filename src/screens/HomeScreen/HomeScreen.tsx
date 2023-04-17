@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import {
@@ -6,16 +7,20 @@ import {
   ButtonPrimary,
   ButtonSecondary,
   ButtonPrimaryIcon,
+  Modal,
 } from '../../components/atoms';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../navigation/MyStacks/Home/HomeStacks';
 import { Header } from '../../components/templates';
-import { GlobalStyles } from '../../assets/css';
+import { GlobalStyles } from '../../assets/';
 
 export type StackNavigation = NativeStackNavigationProp<RootStackParamList>;
 
 const HomeScreen = (): JSX.Element => {
+  const [visible, setVisible] = useState(false);
   const navigation = useNavigation<StackNavigation>();
+
+  const onClose = () => setVisible(false);
 
   return (
     <View>
@@ -63,7 +68,7 @@ const HomeScreen = (): JSX.Element => {
           />
           <ButtonIcon
             onPress={() => null}
-            iconName='leftArrow'
+            iconName='printer'
             iconWidth={24}
             iconHeight={24}
             iconColor='white'
@@ -72,14 +77,30 @@ const HomeScreen = (): JSX.Element => {
         </View>
         <ButtonPrimaryIcon
           title='Save information'
-          onPress={() => null}
-          iconName='leftArrow'
+          onPress={() => setVisible(true)}
+          iconName='rightArrow'
           iconWidth={20}
           iconHeight={20}
           iconColor={styles.iconButtonText.color}
           buttonStyle={styles.button}
           titleStyle={styles.iconButtonText}
         />
+        <Modal
+          title='Registro de avance'
+          secondaryText='Cancelar'
+          primaryText='Aceptar'
+          iconHeaderName='logo'
+          iconColor='yellow'
+          visible={visible}
+          onClose={onClose}
+          onSecondaryPress={onClose}
+          onPrimaryPress={onClose}
+          hasTwoButtons
+        >
+          <View>
+            <Text>¿Deseas cambiar el estado a entregado?</Text>
+          </View>
+        </Modal>
       </View>
     </View>
   );
