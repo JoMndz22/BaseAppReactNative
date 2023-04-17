@@ -1,8 +1,8 @@
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { ButtonSecondaryProps } from './Button.types';
-import { Colors } from '../../../assets/css';
+import { Colors } from '../../../assets';
 
-export default function ButtonSecondary({
+export function ButtonSecondary({
   title,
   onPress,
   isDisabled,
@@ -10,15 +10,12 @@ export default function ButtonSecondary({
   titleStyle = {},
 }: ButtonSecondaryProps) {
   return (
-    <TouchableOpacity
-      onPress={onPress}
-      disabled={isDisabled}
-      activeOpacity={0.8}
-      style={[styles.container, buttonStyle, isDisabled && styles.disableStyle]}
-    >
-      <Text numberOfLines={1} style={[styles.text, titleStyle]}>
-        {title}
-      </Text>
+    <TouchableOpacity onPress={onPress} disabled={isDisabled} activeOpacity={0.8}>
+      <View style={[styles.container, buttonStyle, isDisabled && styles.disableStyle]}>
+        <Text numberOfLines={1} style={[styles.text, titleStyle]}>
+          {title}
+        </Text>
+      </View>
     </TouchableOpacity>
   );
 }
@@ -32,7 +29,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     alignItems: 'center',
     borderRadius: 12,
-    flex: 1,
+    // flex: 1,
+    width: undefined,
     height: 50,
   },
   disableStyle: {

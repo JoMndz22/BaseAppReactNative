@@ -2,7 +2,7 @@ import { StyleSheet, TouchableOpacity } from 'react-native';
 import { ButtonIconProps } from './Button.types';
 import { Svg } from '../Svg';
 
-export default function ButtonPrimary({
+export function ButtonIcon({
   onPress,
   iconName,
   isDisabled,
