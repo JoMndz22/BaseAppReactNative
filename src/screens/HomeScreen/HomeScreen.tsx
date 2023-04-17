@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import {
@@ -11,8 +12,7 @@ import {
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../navigation/MyStacks/Home/HomeStacks';
 import { Header } from '../../components/templates';
-import { GlobalStyles } from '../../assets/css';
-import { useState } from 'react';
+import { GlobalStyles } from '../../assets/';
 
 export type StackNavigation = NativeStackNavigationProp<RootStackParamList>;
 
