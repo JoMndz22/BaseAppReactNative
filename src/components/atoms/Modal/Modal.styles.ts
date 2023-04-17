@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { Colors } from '../../../assets/css';
+import { Colors } from '../../../assets';
 
 export const styles = StyleSheet.create({
   container: {
@@ -34,10 +34,14 @@ export const styles = StyleSheet.create({
   },
   firstFooter: {
     width: '100%',
+    flexWrap: 'wrap',
     marginTop: 10,
     paddingHorizontal: 15,
     marginBottom: 15,
     flexDirection: 'row',
+  },
+  buttonContainer: {
+    flex: 1,
   },
   divider: {
     width: 23,
@@ -48,10 +52,10 @@ export const styles = StyleSheet.create({
     marginTop: 10,
     paddingHorizontal: 15,
     marginBottom: 15,
-    flexDirection: 'row',
   },
   button: {
     height: 50,
-    width: '100%',
+    width: undefined,
+    alignSelf: 'stretch',
   },
 });

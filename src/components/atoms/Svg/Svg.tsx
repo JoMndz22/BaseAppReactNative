@@ -1,7 +1,7 @@
 import { SvgXml } from 'react-native-svg';
 import { SvgProps } from './Svg.types';
 import { SvgFiles } from './SvgFiles';
-import { Colors } from '../../../assets/css';
+import { Colors } from '../../../assets';
 
 const addCurrentColorToSvg = (xml: string) => {
   // stroke: value to change the icon color

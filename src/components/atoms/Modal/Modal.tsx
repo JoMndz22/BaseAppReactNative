@@ -1,5 +1,6 @@
 import { Modal as RNModal, Text, TouchableOpacity, View } from 'react-native';
-import { Svg, ButtonPrimary, ButtonSecondary } from '../';
+import { ButtonPrimary, ButtonSecondary } from '../Button';
+import { Svg } from '../Svg';
 import LogoSvg from '../../../assets/images/svg/logo.svg';
 import ModalProps from './Modal.types';
 import { styles } from './Modal.styles';
@@ -35,17 +36,21 @@ export default function Modal({
           <View style={styles.child}>{children}</View>
           {hasTwoButtons ? (
             <View style={styles.firstFooter}>
-              <ButtonSecondary
-                title={secondaryText}
-                onPress={onSecondaryPress}
-                buttonStyle={styles.button}
-              />
+              <View style={styles.buttonContainer}>
+                <ButtonSecondary
+                  title={secondaryText}
+                  onPress={onSecondaryPress}
+                  buttonStyle={styles.button}
+                />
+              </View>
               <View style={styles.divider} />
-              <ButtonPrimary
-                title={primaryText}
-                onPress={onPrimaryPress}
-                buttonStyle={styles.button}
-              />
+              <View style={styles.buttonContainer}>
+                <ButtonPrimary
+                  title={primaryText}
+                  onPress={onPrimaryPress}
+                  buttonStyle={styles.button}
+                />
+              </View>
             </View>
           ) : (
             <View style={styles.secondFooter}>
