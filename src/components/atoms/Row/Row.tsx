@@ -2,8 +2,6 @@ import React from 'react';
 import { StyleProp, StyleSheet, View, ViewStyle } from 'react-native';
 import { Nz } from '../../../functions';
 
-//style?: StyleProp<ViewStyle> | undefined;
-
 interface RowProps {
   children?: React.ReactNode;
   style?: StyleProp<ViewStyle> | undefined;

@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: Nz(12),
     borderColor: '#baa3a352',
     borderWidth: Nz(1),
+    marginBottom: Nz(15),
   },
   colGap6: {
     columnGap: Nz(6),
