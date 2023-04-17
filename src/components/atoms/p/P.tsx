@@ -8,11 +8,12 @@ const P = ({
   children,
   align = 'left',
   color = Colors.black[0],
-  fsize = Nz(14),
+  fontSize = Nz(14),
   style = {},
   type,
 }: Pprops): JSX.Element => {
   let fontFamily = Fonts.medium;
+
   switch (type) {
     case 'black':
       fontFamily = Fonts.black;
@@ -47,16 +48,16 @@ const P = ({
   }
 
   return (
-    <Text style={[styles({ align, color, fsize, fontFamily }).txtAlign, style]}>{children}</Text>
+    <Text style={[styles({ align, color, fontSize, fontFamily }).txtAlign, style]}>{children}</Text>
   );
 };
 
-export const styles = ({ align, color, fsize, fontFamily }: any) =>
+export const styles = ({ align, color, fontSize, fontFamily }: any) =>
   StyleSheet.create({
     txtAlign: {
       textAlign: align,
       color,
-      fontSize: fsize,
+      fontSize: fontSize,
       fontFamily: fontFamily,
     },
   });

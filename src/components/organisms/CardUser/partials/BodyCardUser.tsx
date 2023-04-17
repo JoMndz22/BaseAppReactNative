@@ -3,9 +3,9 @@ import { Block, P } from '../../../atoms';
 import { Colors, GlobalStyles } from '../../../../assets/';
 import { styles } from '../CardUser.css';
 import { Nz } from '../../../../functions';
-import { CardUserProps } from '../CardUser.types';
+import { CardUser } from '../CardUser.types';
 
-const BodyCardUser = ({ medidor, numeroCuenta, direccion }: CardUserProps) => {
+const BodyCardUser = ({ medidor, numeroCuenta, direccion }: CardUser) => {
   return (
     <Block>
       <Block style={[GlobalStyles.flexRow]}>
@@ -13,7 +13,7 @@ const BodyCardUser = ({ medidor, numeroCuenta, direccion }: CardUserProps) => {
           <P align='center' type='fit' style={styles.h18}>
             No. Medidor
           </P>
-          <P align='center' type='bold' fsize={Nz(20)} color={Colors.blueSolid1[0]}>
+          <P align='center' type='bold' fontSize={Nz(20)} color={Colors.blueSolid1[0]}>
             {medidor}
           </P>
         </View>
@@ -21,13 +21,13 @@ const BodyCardUser = ({ medidor, numeroCuenta, direccion }: CardUserProps) => {
           <P align='center' type='fit' style={styles.h18}>
             No. Cuenta
           </P>
-          <P align='center' type='bold' fsize={Nz(20)} color={Colors.blueSolid1[0]}>
+          <P align='center' type='bold' fontSize={Nz(20)} color={Colors.blueSolid1[0]}>
             {numeroCuenta}
           </P>
         </View>
       </Block>
       <View style={styles.borderBottom}>
-        <P align='center' fsize={Nz(12)}>
+        <P align='center' fontSize={Nz(12)}>
           {direccion}
         </P>
       </View>

@@ -1,11 +1,11 @@
 import { View } from 'react-native';
 import { P, PBackground as Bg } from '../../../atoms';
-import { CardUserProps } from '../CardUser.types';
+import { CardUser } from '../CardUser.types';
 
 import { Colors, GlobalStyles } from '../../../../assets/';
 import { styles } from '../CardUser.css';
 
-const FooterCardUser = ({ geo, factura, ruta }: CardUserProps) => {
+const FooterCardUser = ({ geo, factura, ruta }: CardUser) => {
   return (
     <View style={[GlobalStyles.flexRow, GlobalStyles.jContentSpaceB, { paddingTop: 2 }]}>
       <View>

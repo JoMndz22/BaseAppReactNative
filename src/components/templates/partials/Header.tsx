@@ -4,7 +4,7 @@ import { P } from '../../atoms';
 const Header = () => {
   return (
     <View style={styles.container}>
-      <P color={'red'} fsize={20}>
+      <P color={'red'} fontSize={20}>
         Header ANDA
       </P>
     </View>

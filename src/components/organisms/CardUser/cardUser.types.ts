@@ -1,4 +1,4 @@
-export interface CardUserProps {
+export interface CardUser {
   id?: string;
   secuencia?: string;
   local?: string;
@@ -11,4 +11,8 @@ export interface CardUserProps {
   ruta?: string;
   metrosCubicos?: string;
   factura?: string | null | boolean;
+}
+
+export interface CardUserProps {
+  data: CardUser;
 }

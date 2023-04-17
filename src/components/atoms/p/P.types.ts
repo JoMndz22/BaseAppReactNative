@@ -5,6 +5,6 @@ export interface Pprops {
   color?: string;
   style?: StyleProp<ViewStyle> | undefined;
   align?: string;
-  fsize?: number;
+  fontSize?: number;
   type?: string;
 }
